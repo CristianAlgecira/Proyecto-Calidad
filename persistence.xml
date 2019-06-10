@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2">
+
+    <persistence-unit name="UstaJPA-CRM">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/Wildfly/UstaEmpresarial</jta-data-source>
+        <class>co.edu.usta.persistence.crm.TipoMedio</class>
+        <class>co.edu.usta.persistence.crm.Periodo</class>
+        <class>co.edu.usta.persistence.crm.Campania</class>
+        <class>co.edu.usta.persistence.crm.Evento</class>
+        <class>co.edu.usta.persistence.crm.Recurso</class>
+        <class>co.edu.usta.persistence.crm.Medio</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+
+    <persistence-unit name="UstaJPA-Facturacion">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/Wildfly/UstaEmpresarial</jta-data-source>
+        <class>co.edu.usta.persistence.facturacion.CategoriaProducto</class>
+        <class>co.edu.usta.persistence.facturacion.Cliente</class>
+        <class>co.edu.usta.persistence.facturacion.Producto</class>
+        <class>co.edu.usta.persistence.facturacion.Proveedor</class>
+        <class>co.edu.usta.persistence.facturacion.ProveedorProducto</class>
+        <class>co.edu.usta.persistence.facturacion.ProveedorProductoPK</class>
+        <class>co.edu.usta.persistence.facturacion.Venta</class>
+        <class>co.edu.usta.persistence.facturacion.VentaDetalle</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/ustaempresarial"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="UstaJPA-Finanzas">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/Wildfly/UstaEmpresarial</jta-data-source>
+        <class>co.edu.usta.persistence.finanzas.Concepto</class>
+        <class>co.edu.usta.persistence.finanzas.LibroDiario</class>
+        <class>co.edu.usta.persistence.finanzas.LibroMayor</class>
+        <class>co.edu.usta.persistence.finanzas.Periodo</class>
+        <class>co.edu.usta.persistence.finanzas.PlanContable</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+
+    <persistence-unit name="UstaJPA-Nomina">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/Wildfly/UstaEmpresarial</jta-data-source>
+        <class>co.edu.usta.persistence.nomina.Cargo</class>
+        <class>co.edu.usta.persistence.nomina.Concepto</class>
+        <class>co.edu.usta.persistence.nomina.Contrato</class>
+        <class>co.edu.usta.persistence.nomina.Dependencia</class>
+        <class>co.edu.usta.persistence.nomina.HojaVida</class>
+        <class>co.edu.usta.persistence.nomina.Nomina</class>
+        <class>co.edu.usta.persistence.nomina.Periodo</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+
+    <persistence-unit name="UstaJPA-Seguridad">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/Wildfly/UstaEmpresarial</jta-data-source>
+        <class>co.edu.usta.persistence.seguridad.Permiso</class>
+        <class>co.edu.usta.persistence.seguridad.Rol</class>
+        <class>co.edu.usta.persistence.seguridad.RolPermiso</class>
+        <class>co.edu.usta.persistence.seguridad.RolUsuario</class>
+        <class>co.edu.usta.persistence.seguridad.Usuario</class>
+        <class>co.edu.usta.persistence.seguridad.UsuarioLog</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+
+</persistence>
